@@ -1,4 +1,4 @@
-import { ICategoriesRepository } from "../repositories/ICategoriesRepository"
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository"
 
 interface IRequest {
   name: string;
@@ -7,7 +7,7 @@ interface IRequest {
 
 // Service é camada de Alto Nível, que está mais proximo ao Dominio
 // Rotas é camada de Baixo Nível, mais próximo ao usuário
-class CreateCategoryService {
+class CreateCategoryUseCase {
   constructor(private categoriesRepository: ICategoriesRepository) { }
 
   execute({ name, description }: IRequest): void {
@@ -23,4 +23,4 @@ class CreateCategoryService {
   }
 }
 
-export { CreateCategoryService }
+export { CreateCategoryUseCase }
