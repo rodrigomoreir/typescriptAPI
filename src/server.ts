@@ -1,5 +1,5 @@
 import express, { response } from 'express'
-import { categoriesRoutes } from './categories.routes'
+import { categoriesRoutes } from './routes/categories.routes'
 
 const app = express()
 
